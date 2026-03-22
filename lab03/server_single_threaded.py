@@ -29,7 +29,7 @@ try:
         if method == 'GET':
             file_path = root / path[1:]
             print('requesting path', file_path)
-            if not file_path.exists():
+            if not file_path.exists() or not file_path.is_file() or not file_path.is_relative_to(root):
                 status_code = HTTPStatus.NOT_FOUND
                 content_length = 0
                 last_modified = datetime.now()
