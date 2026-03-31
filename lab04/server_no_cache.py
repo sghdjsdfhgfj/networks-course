@@ -29,7 +29,6 @@ def get_page(method, path, body):
         Connection: keep-alive
         
         """) + body).lstrip().encode()
-    print(request)
     client_socket.send(request)
 
     data = client_socket.recv(4096)

@@ -35,12 +35,10 @@ def get_page(method, path, body, timestamp = None):
         Connection: keep-alive
         {if_modified_since}
         """) + body).lstrip().encode()
-    print(request)
     client_socket.send(request)
 
     data = client_socket.recv(4096)
     headers = data.decode().split('\r\n\r\n')[0]
-    print(headers)
     if len(headers) == 0:
         return 400, "server returned empty response".encode()
 
@@ -57,7 +55,7 @@ def get_page(method, path, body, timestamp = None):
         client_socket.close()
         return status_code, f"Server returned status {status}".encode()
     else:
-        content_length = int(header_lines['Content-Length'])
+        content_length = int(header_lines.get('Content-Length', 0))
         while len(data) < content_length:
             new_data = client_socket.recv(1024)
             #if not data:
@@ -89,14 +87,15 @@ def process_request(conn):
     method, path, protocol = header.split('\n')[0].split(' ')
     path = path[1:]
     if method == 'GET' and path in cache and body in cache[path]:
-        print(f'request {method} {path} found in cache')
         last_modified, status_code, response_body = cache[path][body]
         new_status_code, new_response_body = get_page(method, path, body, timestamp = last_modified)
         if new_status_code != 304:
+            print(f'request {method} {path} found in cache but modified since, replacing')
             status_code = new_status_code
             response_body = new_response_body
             save_cache(method, path, body, new_status_code, new_response_body)
         else:
+            print(f'request {method} {path} found in cache')
             response_body = response_body.encode()
         status_code = HTTPStatus(status_code)
     elif method == 'GET' or method == 'POST':
