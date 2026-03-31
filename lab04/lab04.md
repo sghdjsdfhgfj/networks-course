@@ -32,7 +32,9 @@ _(*) Вы должны заменить стоящий здесь 8888 на но
 Приложите скрины или логи работы сервера.
 
 #### Демонстрация работы
-todo
+<img width="1917" height="1172" alt="image" src="https://github.com/user-attachments/assets/587ac3ad-1a87-4e06-9abf-30dad53a3eb6" />
+<img width="1538" height="1034" alt="image" src="https://github.com/user-attachments/assets/1e701953-8e51-4123-ba0b-bc151e02b983" />
+<img width="1845" height="478" alt="image" src="https://github.com/user-attachments/assets/bad933b6-fcc3-4640-9f21-b33c695ad53f" />
 
 ### Б. Прокси-сервер с кешированием (4 балла)
 Когда прокси-сервер получает запрос, он проверяет, есть ли запрашиваемый объект в кэше, и,
@@ -52,7 +54,8 @@ todo
 Приложите скрины или логи, из которых понятно, что ответ на повторный запрос был взят из кэша.
 
 #### Демонстрация работы
-todo
+<img width="1845" height="478" alt="image" src="https://github.com/user-attachments/assets/f52056fa-a8bb-463d-986a-987e1c02997f" />
+<img width="1845" height="478" alt="image" src="https://github.com/user-attachments/assets/3c5f43f4-65a1-49aa-bdd5-fd0e0e988c2c" />
 
 ### В. Черный список (2 балла)
 Прокси-сервер отслеживает страницы и не пускает на те, которые попадают в черный список. Вместо
@@ -62,7 +65,8 @@ todo
 Приложите скрины или логи запроса из черного списка.
 
 #### Демонстрация работы
-todo
+<img width="1845" height="478" alt="image" src="https://github.com/user-attachments/assets/3264aa1d-1ca3-4701-bf6c-87f7610546a4" />
+<img width="1845" height="478" alt="image" src="https://github.com/user-attachments/assets/55dc9884-c60b-43c2-af99-652ec074a40b" />
 
 ## Wireshark. Работа с DNS
 Для каждого задания в этой секции приложите скрин с подтверждением ваших ответов.
@@ -71,12 +75,13 @@ todo
 
 #### Вопросы
 1. Выполните nslookup, чтобы получить IP-адрес какого-либо веб-сервера в Азии
-   - <!-- todo -->
+   - <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/eabfb584-2d5f-4638-a21c-7ba2dafcab04" />
 2. Выполните nslookup, чтобы определить авторитетные DNS-серверы для какого-либо университета в Европе
-   - <!-- todo -->
+   - <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/3d9571f6-beb1-46e5-9cc7-86a7a4021cd9" />
 3. Используя nslookup, найдите веб-сервер, имеющий несколько IP-адресов. Сколько IP-адресов имеет веб-сервер вашего учебного заведения?
-   - <!-- todo -->
-   - <!-- todo -->
+   - несколько IP-адресов: см. первое задание
+   - у СПбГУ один IP-адрес
+     <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/73588cfa-0cf7-4ae3-bcf3-5052da4a2c01" />
 
 ### Б. DNS-трассировка www.ietf.org (3 балла)
 
