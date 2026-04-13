@@ -48,7 +48,16 @@
 Приложите скриншоты.
 
 #### Скрины
-todo
+<img width="1155" height="569" alt="image" src="https://github.com/user-attachments/assets/63c63347-06e1-4487-8c2f-eb658ba15839" />
+<img width="1920" height="1152" alt="image" src="https://github.com/user-attachments/assets/507225b7-ea3b-4413-87d8-3945402abb8f" />
+<img width="1920" height="1152" alt="image" src="https://github.com/user-attachments/assets/346f8cc1-9d25-4498-8e53-2baecc42b4b9" />
+<img width="1920" height="1152" alt="image" src="https://github.com/user-attachments/assets/c6a659e4-676d-4df8-8985-170d17b95a9e" />
+<img width="1920" height="1152" alt="image" src="https://github.com/user-attachments/assets/45a63613-4e8e-478c-9ebc-1224d2984dac" />
+<img width="1920" height="1152" alt="image" src="https://github.com/user-attachments/assets/68850a0b-9b16-46ac-a228-7882fc5e4c59" />
+<img width="1920" height="1152" alt="image" src="https://github.com/user-attachments/assets/a690926d-26b8-4e5f-ac23-3644ce6e0ae7" />
+<img width="1920" height="1152" alt="image" src="https://github.com/user-attachments/assets/aef74988-7d82-4807-8d62-4f046f384fca" />
+<img width="1920" height="1152" alt="image" src="https://github.com/user-attachments/assets/095532dc-3afa-4f4c-bb14-94eb907568bc" />
+
 
 ### FTP клиент (3 балла)
 Создайте консольное приложение FTP клиента для работы с файлами по FTP. Приложение может
