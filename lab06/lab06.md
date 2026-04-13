@@ -8,23 +8,32 @@
 
 #### Вопросы
 1. Выберите один UDP-пакет. По этому пакету определите, сколько полей содержит UDP-заголовок.
-   - <!-- todo -->
+   - 4 поля: source port, destination port, length checksum
+     <img width="959" height="183" alt="image" src="https://github.com/user-attachments/assets/3e808981-94ef-4159-bb24-692bac5475b6" />
 2. Определите длину (в байтах) для каждого поля UDP-заголовка, обращаясь к отображаемой
    информации о содержимом полей в данном пакете.
-   - <!-- todo -->
+   - все поля по 2 байта
+     <img width="1578" height="414" alt="image" src="https://github.com/user-attachments/assets/acc68588-826e-48d1-9ef3-ccb50ead6c18" />
+     <img width="1553" height="411" alt="image" src="https://github.com/user-attachments/assets/2e5270e4-c00f-4735-8065-60006c9046a6" />
+     <img width="1615" height="415" alt="image" src="https://github.com/user-attachments/assets/21564383-c4f9-496c-89b7-4d5ee033b0b5" />
+     <img width="1522" height="409" alt="image" src="https://github.com/user-attachments/assets/82253a3e-d753-452f-9a52-e04c6feee783" />
 3. Значение в поле Length (Длина) – это длина чего?
-   - <!-- todo -->
+   - длина всего udp-пакета, включая заголовок
 4. Какое максимальное количество байт может быть включено в полезную нагрузку UDP-пакета?
-   - <!-- todo -->
+   - (2^16 - 1) - 8 = 65527
 5. Чему равно максимально возможное значение номера порта отправителя?
-   - <!-- todo -->
+   - 65535
 6. Какой номер протокола для протокола UDP? Дайте ответ и для шестнадцатеричной и
    десятеричной системы. Чтобы ответить на этот вопрос, вам необходимо заглянуть в поле
    Протокол в IP-дейтаграмме, содержащей UDP-сегмент.
-   - <!-- todo -->
+   - 17 (0x11)
+     <img width="1597" height="424" alt="image" src="https://github.com/user-attachments/assets/fddf4809-b62a-445c-a058-15d4e405b866" />
 7. Проверьте UDP-пакет и ответный UDP-пакет, отправляемый вашим хостом. Определите
    отношение между номерами портов в двух пакетах.
-   - <!-- todo -->
+   - src port в запросе = dst port в ответе
+   - dst port в запросе = src port в ответе
+     <img width="957" height="430" alt="image" src="https://github.com/user-attachments/assets/0661c71a-a0a2-4830-a7b6-1cd99065c125" />
+     <img width="957" height="412" alt="image" src="https://github.com/user-attachments/assets/a0f6b15b-2316-4e4f-935e-89ada471411f" />
 
 ## Программирование. FTP
 
