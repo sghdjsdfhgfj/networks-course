@@ -72,7 +72,19 @@
 Бонус: Не используйте готовые библиотеки для работы с FTP (например, ftplib для Python), а реализуйте решение на сокетах **(+3 балла)**.
 
 #### Демонстрация работы
-todo
+Содержимое папки, на которую настроен FileZilla-сервер:
+
+<img width="955" height="793" alt="image" src="https://github.com/user-attachments/assets/d16b1296-8640-44f9-912c-a269f19b7c0b" />
+<img width="954" height="793" alt="image" src="https://github.com/user-attachments/assets/c36e7f31-3559-4995-834b-0b037743468b" />
+<img width="957" height="793" alt="image" src="https://github.com/user-attachments/assets/68457963-440a-41f0-938c-4d56c87fcf2c" />
+
+Скриншоты работы программы:
+<img width="1150" height="421" alt="image" src="https://github.com/user-attachments/assets/7c3c44d7-d718-4a74-829b-ea82311dcf0a" />
+<img width="1920" height="1152" alt="image" src="https://github.com/user-attachments/assets/4f2844e4-8072-4436-8f03-4a089f04afb2" />
+<img width="1920" height="1152" alt="image" src="https://github.com/user-attachments/assets/4b36ac0c-dc99-4826-99f6-718ee1680ffa" />
+<img width="1920" height="1152" alt="image" src="https://github.com/user-attachments/assets/6049d634-3df3-46df-a080-f6c1d37d1453" />
+<img width="1920" height="1152" alt="image" src="https://github.com/user-attachments/assets/cdcb86f6-430c-4877-9f92-11d0af4cf098" />
+
 
 ### GUI FTP клиент (4 балла)
 Реализуйте приложение FTP клиента с графическим интерфейсом. НЕ используйте C#.
@@ -91,7 +103,18 @@ todo
 содержимое файла можно выводить в главном окне.
 
 #### Демонстрация работы
-todo
+В окне консоли отображается ход общения GUI-клиента с сервером FileZilla. Команды, которые посылает клиент, начинаются с `>`, а ответы от сервера - с `<`.
+
+<img width="1920" height="1152" alt="image" src="https://github.com/user-attachments/assets/125feee0-5b3b-42d1-93e1-11f231486b60" />
+<img width="1920" height="1152" alt="image" src="https://github.com/user-attachments/assets/3b54c5ce-28b5-4564-be0c-ebd8ce531da6" />
+<img width="1920" height="1152" alt="image" src="https://github.com/user-attachments/assets/b3f71715-88e0-4c1b-8640-f8dd917462bc" />
+<img width="1920" height="1152" alt="image" src="https://github.com/user-attachments/assets/eb7d436f-f4de-43a7-a0ee-6986da3104a9" />
+<img width="1920" height="1152" alt="image" src="https://github.com/user-attachments/assets/946970fc-aac9-401f-b4e4-01e9503ff356" />
+<img width="1920" height="1152" alt="image" src="https://github.com/user-attachments/assets/4b3922ea-77ce-4e7b-ac91-d1b0606882d3" />
+
+Результаты работы:
+<img width="1920" height="1152" alt="image" src="https://github.com/user-attachments/assets/771718c6-131b-40b2-ad04-521ec8120a1d" />
+<img width="1920" height="1152" alt="image" src="https://github.com/user-attachments/assets/5236db96-0e72-4e28-ae9b-56f68c681d81" />
 
 ### FTP сервер (5 баллов)
 Реализуйте свой FTP сервер, который работает поверх TCP сокетов. Вы можете использовать FTP клиента, реализованного на прошлом этапе, для тестирования своего сервера.
@@ -105,4 +128,11 @@ todo
 - QUIT
 
 #### Демонстрация работы
-todo
+Показана работа GUI-клиента из задания 2 с FTP-сервером, у которого корневая папка - папка самого проекта PyCharm.
+
+В окне консоли отображаются логи работы сервера. Команды, пришедшие с коиентоа, помечены `<`, а ответы, которые посылает им сервер - `>`.
+
+<img width="1920" height="1152" alt="image" src="https://github.com/user-attachments/assets/7d8aeb49-1c3b-4af9-8454-0bf29b80cc06" />
+<img width="1920" height="1152" alt="image" src="https://github.com/user-attachments/assets/68ea457e-284c-49dd-b542-c2fb7aa3df9c" />
+<img width="1920" height="1152" alt="image" src="https://github.com/user-attachments/assets/526bbb9b-cfa8-4c76-8746-a80d6fd2eb4c" />
+
