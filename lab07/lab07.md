@@ -20,44 +20,56 @@
    файл серверу gaia.cs.umass.edu? Для ответа на вопрос, возможно, проще выбрать http-сообщение
    и рассмотреть информацию TCP-пакета, используемого для передачи этого http-сообщения, 
    в окне деталей заголовка пакета.
-   - <!-- todo -->
+   - 172.20.137.88:55346
+     <img width="1003" height="452" alt="image" src="https://github.com/user-attachments/assets/fcab3775-3469-425a-8f18-c2030ea15730" />
 2. Каков IP-адрес у сервера gaia.cs.umass.edu? Каковы номера портов для отправки и приема
    TCP-сегментов этого соединения?
-   - <!-- todo -->
-   - <!-- todo -->
+   - IP-адрес: 128.119.245.12
+   - Номера портов: 80 (выше), 443
+     <img width="958" height="473" alt="image" src="https://github.com/user-attachments/assets/e73c88a0-58f7-40f2-8925-94d188b5c99a" />
 3. Какой порядковый номер у SYN TCP-сегмента, который используется для установления
    TCP-соединения между компьютером клиента и сервером gaia.cs.umass.edu? Как
    определяется, что это именно SYN-сегмент?
-   - <!-- todo -->
-   - <!-- todo -->
+   - 3630450100
+   - У него установлен SYN-флаг
+     <img width="1518" height="498" alt="image" src="https://github.com/user-attachments/assets/62a607de-ffe4-4a7f-8ac0-77ce9e61c53d" />
 4. Какой порядковый номер у SYNACK-сегмента, отправленного сервером gaia.cs.umass.edu
    на компьютер клиента в ответ на SYN-сегмент? Какое значение хранится в поле
    подтверждения в SYNACK-сегменте? Как сервер gaia.cs.umass.edu определил это значение?
    Как определяется, что это именно SYNACK-сегмент?
-   - <!-- todo -->
-   - <!-- todo -->
-   - <!-- todo -->
-   - <!-- todo -->
+   - Номер SYNACK-сегмента: 249944182
+   - Значение поля подтверждения: 3630450101 (порядковый номер SYN-сегмента + 1)
+   - Установлены SYN- и ACK-флаги
+     <img width="1548" height="477" alt="image" src="https://github.com/user-attachments/assets/d9197c8f-c7fe-4ffc-a16a-407bae6e630b" />
 5. Какой порядковый номер у TCP-сегмента, содержащего команду POST протокола HTTP?
    (для нахождения команды POST вам потребуется проникнуть внутрь поля содержимого
    пакета в нижней части окна Wireshark, чтобы найти сегмент, в поле DATA которого
    хранится значение POST)
-   - <!-- todo -->
+   - 3630602375
+     <img width="967" height="496" alt="image" src="https://github.com/user-attachments/assets/fabc4015-accb-455f-b4f7-798ff14505e5" />
 6. Рассмотрите TCP-сегмент, содержащий команду POST протокола HTTP, как первый TCP-сегмент 
    соединения. Какие порядковые номера у первых шести сегментов TCP-соединения 
    (включая сегмент, содержащий команду POST протокола HTTP)? Когда был
    отправлен каждый сегмент? Когда был получен ACK-пакет для каждого сегмента?
    Покажите разницу между тем, когда каждый TCP-сегмент был отправлен и когда было
    получено каждое подтверждение, чему равно значение RTT для каждого из 6 сегментов?
-   - <!-- todo -->
-   - <!-- todo -->
-   - <!-- todo -->
-   - <!-- todo -->
+   - Порядковые номера: 3630450101, 3630451339, 3630452577, 3630453815, 3630455053, 3630456291
+   - Время отправки для всех одинаково: 2026-04-20T11:05:18.160728700Z
+   - ACK-пакет получен один для набора первых 7 пакетов; пришел в 2026-04-20T11:05:18.304695700Z
+   - Общее RTT (для всех пакетов): 143.967 мс
+     <img width="968" height="963" alt="image" src="https://github.com/user-attachments/assets/3cceed66-7acb-4fde-b8fb-01ca078144bd" />
+     <img width="960" height="944" alt="image" src="https://github.com/user-attachments/assets/742b3736-4d03-4458-9a40-62c074d7a7e3" />
+     <img width="964" height="945" alt="image" src="https://github.com/user-attachments/assets/d4a476ed-904b-43ad-9bc2-d740549cf11b" />
+     <img width="957" height="918" alt="image" src="https://github.com/user-attachments/assets/c9eb6de6-ddd2-4f1d-b5ff-b55a4103f164" />
+     <img width="962" height="906" alt="image" src="https://github.com/user-attachments/assets/1e239d35-f82e-44b4-914e-7120803f5ace" />
+     <img width="964" height="890" alt="image" src="https://github.com/user-attachments/assets/247c230b-ef8b-4a7b-883c-6923cc11b950" />
+     <img width="966" height="950" alt="image" src="https://github.com/user-attachments/assets/16e8b9d9-3d4b-47a5-8e94-cf47d0e33014" />
 7. Чему равна пропускная способность (количество байтов, передаваемых в единицу
    времени) для этого TCP-соединения? Объясните, как вы получили это значение.
-   - <!-- todo -->
-   - <!-- todo -->
-
+   - Первый пакет имеет relative номер 1, отправлен в relative время 20.5682359 с
+   - Последний пакет имеет relative номер 151037, отправлен в relative время 21.0104948 с
+   - Итого было передано 151036 байт в 0.4422589 с => пропускная способность ~= 341 кБ/с
+ 
 ### Работа с Time-Sequence-Graph (Stevens) (2 балла)
 Time-Sequence-Graph (Stevens) (Временная шкала (Стивенса)) – одна из графических утилит
 Wireshark для протокола TCP. Для того, чтобы ее запустить, выберите TCP-сегмент в окне
@@ -82,7 +94,8 @@ Time-Sequence-Graph (Stevens) (Статистика => График TCP пото
 серверу gaia.cs.umass.edu. Приложите соответствующий скрин программы Wireshark.
 
 #### Скрин
-todo
+<img width="1282" height="935" alt="image" src="https://github.com/user-attachments/assets/5f593208-bc51-44f6-9902-841923853d39" />
+<img width="1282" height="935" alt="image" src="https://github.com/user-attachments/assets/f76f0ff8-e89e-47c5-b4c2-4890d67887fa" />
 
 ## Программирование. Эхо-запросы через UDP
 Реализуйте сервер для пингования, а также его клиента.
