@@ -44,7 +44,8 @@
 Продемонстрируйте передачу файла от сервера клиенту.
 
 #### Демонстрация работы
-todo
+<img width="1844" height="1066" alt="image" src="https://github.com/user-attachments/assets/81fb5a60-9e94-446c-ae0d-2809195aa4dd" />
+<img width="1123" height="192" alt="image" src="https://github.com/user-attachments/assets/8133cae5-1660-47d8-a0b0-6db179bf1c03" />
 
 ### В. Контрольные суммы (1 балл)
 UDP реализует механизм контрольных сумм при передаче данных. Однако предположим, что
