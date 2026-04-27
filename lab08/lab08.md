@@ -34,7 +34,8 @@
 Приложите скриншоты, подтверждающие работоспособность программы.
 
 #### Демонстрация работы
-todo
+<img width="1860" height="965" alt="image" src="https://github.com/user-attachments/assets/b768c354-2ced-45aa-af5e-473cff014252" />
+<img width="1833" height="630" alt="image" src="https://github.com/user-attachments/assets/e67172b7-291b-48c6-a174-d72ebb619acc" />
 
 ### Б. Дуплексная передача (2 балла)
 Поддержите возможность пересылки данных в обоих направлениях: как от клиента к серверу, так и
