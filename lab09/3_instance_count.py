@@ -57,6 +57,11 @@ def _receive_thread():
                 clients.set(list(instances.keys()))
                 header.set(f"{len(instances)} copies running")
             instances[addrs] = 0
+        elif data == b'close':
+            print("received close from", addrtos(addr))
+            del instances[addrs]
+            clients.set(list(instances.keys()))
+            header.set(f"{len(instances)} copies running")
         else:
             print("received unexpected message from", addrtos(addr), ":", data.decode())
 
@@ -87,3 +92,6 @@ v_scrollbar.grid(row=2, column=2, sticky="NS", pady=(4, 4))
 threading.Thread(target=_send_thread, daemon=True).start()
 threading.Thread(target=_receive_thread, daemon=True).start()
 root.mainloop()
+
+for port in range(lo_port, hi_port + 1):
+    sock.sendto(b'close', ('<broadcast>', port))
