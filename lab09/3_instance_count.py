@@ -50,6 +50,11 @@ def _receive_thread():
         addrs = addrtos(addr)
         if data == b'ping':
             print("received ping from", addrtos(addr))
+            # ping from a new client also doubles as a start message
+            if addrs not in instances:
+                instances[addrs] = 0
+                clients.set(list(instances.keys()))
+                header.set(f"{len(instances)} copies running")
             sock.sendto(b'pong', addr)
         elif data == b'pong':
             if addrs not in instances:
