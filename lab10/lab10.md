@@ -43,42 +43,50 @@ Windows) или UDP-сегмент (в случае с Unix).
 1. Выберите первое ICMP-сообщение эхо-запроса, отправленное вашим компьютером, и
    раскройте часть информации о пакете Internet Protocol в окне подробной информации.
    Каков IP-адрес вашего компьютера?
-   - <!-- todo -->
+   - 192.168.0.4
+     <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/d038222c-3a35-42e7-b9fc-3b01c5de4b49" />
 2. Найдите заголовок IP-пакета. Какое значение указано здесь в поле протокола верхнего уровня?
-   - <!-- todo -->
+   - 17 (UDP)
+     <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/321df30a-fb5f-4c3a-93e5-05ca947854ed" />
 3. Сколько байт в IP-заголовке? Сколько байт приходится на полезную нагрузку IP-дейтаграммы?
-   - <!-- todo -->
-   - <!-- todo -->
+   - IP-заголовок занимает 20 байт.
+   - Дейтаграмма занимает 36 байта - 8 байт на заголовок, 28 байт на сами данные
+     <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/856b91e7-5772-4533-b8f1-de75643de689" />
+     <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/0772d8a4-7b06-49e9-a53e-633b45fda396" />
+     <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/cb287be0-be20-495f-8f5f-fa55b9312346" />
 4. Отсортируйте отслеженные пакеты по их исходному IP-адресу; для этого щелкните по
    заголовку столбца Source. Выберите первое сообщение эхо-запроса, отосланное
    вашим компьютером по протоколу ICMP, и раскройте раздел Internet Protocol.
    1. Какие поля IP-дейтаграммы всегда изменяются от одной дейтаграммы к
       следующей в рамках одной последовательности ICMP-сообщений, отсылаемых
       компьютером (последовательность – это все сообщения, которые отправляются до конечного хоста)?
-      - <!-- todo -->
+      - Всегда меняются поля Identification и Checksum.
+      - TTL меняется каждые три пакета.
+        <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/06dfad7d-7630-401f-8b41-ca013c1f6fa0" />
+        <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/076a003a-ecef-4aa4-afde-341232e78703" />
    2. Какие поля не меняются? Какие поля должны оставаться неизменными? Какие
       поля должны изменяться? (в рамках одного запуска утилиты)
-      - <!-- todo -->
-      - <!-- todo -->
-      - <!-- todo -->
+      - Не меняются поля: Version, Header Length, Total Length, Protocol, Source Address, Destination Address, Flags, Fragment Offset
+      - Поля Version, Header Length, Total Length, Protocol, Source Address, Destination Address в рамках одного запуска должны оставаться неизменными. Destination Address и Total Length будут разными при разных запусках программы.
+      - TTL, как упомянуто выше, меняется каждые 3 пакета. Flags и Fragment Offset могут меняться, а могут и не меняться в зависимости от длины дейтаграммы, см. пункт 8
    3. Как изменяется значение поля Identification IP-дейтаграммы с каждым
       последующим эхо-запросом? Есть ли какая-либо закономерность?
-      - <!-- todo -->
-      - <!-- todo -->
+      - У каждого нового запроса свой Identification - целое число размером в 2 байта. Закономерности не видно.
 5. Какое значение содержится в поле Identification (Идентификация), а какое – в поле TTL
    (выберите какой-либо один пакет ICMP)?
-   - <!-- todo -->
-   - <!-- todo -->
+   - У первого отправленного пакета (см. пункты 1-2 для скриншота) Identification = 0x828e (33422), а TTl = 1
 6. Остаются ли эти значения (Identification и TTL) неизменными во всех сообщениях
    протокола ICMP, где содержится информация об истечении предписанного времени
    жизни; рассмотрите только те из таких сообщений, которые поступили на компьютер с
    ближайшего (первого транзитного) маршрутизатора.
-   - <!-- todo -->
+   - Нет; закономерность в TTL/Identification зависит от маршрутизатора, но значения не совпадают с изначальным пакетом.
+     <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/8ca5da90-d356-4765-81db-feb64c49f5cf" />
+     <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/f3068d28-b52f-430f-a737-0508f683297d" />
+     <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/248cee4b-1472-4dbd-8f91-d3794d75c0a4" />
 7. Найдите серии откликов ICMP, в которых содержатся сообщения об истечении
    предписанного времени жизни (time-to-live exceeded). Выберите один из пакетов.
    Какое значение содержится в поле Identification (Идентификация), а какое – в поле TTL?
-   - <!-- todo -->
-   - <!-- todo -->
+   - Например, в первом пакете из скриншотов выше, Identification = 0x9790, a TTL = 251
 8. **Фрагментация**. Остановите захват пакетов в Wireshark. Измените размер пакета
    Packet Size = 3500 байт. Снова запустите захват пакетов в Wireshark и перезапустите
    трассировку. (Для Unix заново запустите traceroute с длиной пакета 3500 байт).
@@ -86,9 +94,14 @@ Windows) или UDP-сегмент (в случае с Unix).
    компьютер (с уже измененным размером пакета).
    1. Было ли это сообщение фрагментировано между двумя или более IP-дейтаграммами? 
       Если да, то сколько фрагментов было создано?
-      - <!-- todo -->
+      - _Поступившее_ сообщение пришло в одной дейтаграмме. _Отправленное_ сообщение было разбито на три фрагмента.
+        <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/83e81230-6146-4a02-bbc6-01837f01f277" />
    2. Какие поля IP-заголовка изменяются в разных фрагментах?
-      - <!-- todo -->
+      - Меняются: Flags (0x1 во всех фрагментах, кроме последнего, в котором 0x0), Total Length (1500/1500/540), Fragment Offset (0/1480/2960), Header Checksum
+        <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/aed021d7-ee50-4bfd-80b1-6c6a7e7f259e" />
+        <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/a7d56825-df6e-44ad-ae20-d703a27e32c8" />
+        <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/eb991aeb-0e23-4b8e-9e00-e8480658d9af" />
+
 
 ## Программирование.
 
