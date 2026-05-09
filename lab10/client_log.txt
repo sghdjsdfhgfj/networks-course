@@ -1,0 +1,134 @@
+sending packet 0
+Current status:
+[00] 01  02  03  04  05  06  07  08  09  10  11  12  13  14  15 
+sending packet 1
+Current status:
+[00  01] 02  03  04  05  06  07  08  09  10  11  12  13  14  15 
+sending packet 2
+Current status:
+[00  01  02] 03  04  05  06  07  08  09  10  11  12  13  14  15 
+sending packet 3
+Current status:
+[00  01  02  03] 04  05  06  07  08  09  10  11  12  13  14  15 
+received ack 0
+Current status:
+ 00 [01  02  03] 04  05  06  07  08  09  10  11  12  13  14  15 
+sending packet 4
+Current status:
+ 00 [01  02  03  04] 05  06  07  08  09  10  11  12  13  14  15 
+received ack 1
+Current status:
+ 00  01 [02  03  04] 05  06  07  08  09  10  11  12  13  14  15 
+sending packet 5
+Current status:
+ 00  01 [02  03  04  05] 06  07  08  09  10  11  12  13  14  15 
+received ack 2
+Current status:
+ 00  01  02 [03  04  05] 06  07  08  09  10  11  12  13  14  15 
+sending packet 6
+Current status:
+ 00  01  02 [03  04  05  06] 07  08  09  10  11  12  13  14  15 
+received ack 3
+Current status:
+ 00  01  02  03 [04  05  06] 07  08  09  10  11  12  13  14  15 
+sending packet 7
+Current status:
+ 00  01  02  03 [04  05  06  07] 08  09  10  11  12  13  14  15 
+received ack 4
+Current status:
+ 00  01  02  03  04 [05  06  07] 08  09  10  11  12  13  14  15 
+sending packet 8
+Current status:
+ 00  01  02  03  04 [05  06  07  08] 09  10  11  12  13  14  15 
+received ack 5
+Current status:
+ 00  01  02  03  04  05 [06  07  08] 09  10  11  12  13  14  15 
+sending packet 9
+Current status:
+ 00  01  02  03  04  05 [06  07  08  09] 10  11  12  13  14  15 
+received ack 6
+Current status:
+ 00  01  02  03  04  05  06 [07  08  09] 10  11  12  13  14  15 
+sending packet 10
+Current status:
+ 00  01  02  03  04  05  06 [07  08  09  10] 11  12  13  14  15 
+received ack 7
+Current status:
+ 00  01  02  03  04  05  06  07 [08  09  10] 11  12  13  14  15 
+sending packet 11
+Current status:
+ 00  01  02  03  04  05  06  07 [08  09  10  11] 12  13  14  15 
+received ack 8
+Current status:
+ 00  01  02  03  04  05  06  07  08 [09  10  11] 12  13  14  15 
+sending packet 12
+Current status:
+ 00  01  02  03  04  05  06  07  08 [09  10  11  12] 13  14  15 
+received ack 9
+Current status:
+ 00  01  02  03  04  05  06  07  08  09 [10  11  12] 13  14  15 
+sending packet 13
+Current status:
+ 00  01  02  03  04  05  06  07  08  09 [10  11  12  13] 14  15 
+received ack 10
+Current status:
+ 00  01  02  03  04  05  06  07  08  09  10 [11  12  13] 14  15 
+sending packet 14
+Current status:
+ 00  01  02  03  04  05  06  07  08  09  10 [11  12  13  14] 15 
+received ack 11
+Current status:
+ 00  01  02  03  04  05  06  07  08  09  10  11 [12  13  14] 15 
+sending packet 15
+Current status:
+ 00  01  02  03  04  05  06  07  08  09  10  11 [12  13  14  15]
+received ack 12
+Current status:
+ 00  01  02  03  04  05  06  07  08  09  10  11  12 [13  14  15]
+sending packet 0
+Current status:
+ 00] 01  02  03  04  05  06  07  08  09  10  11  12 [13  14  15 
+received ack 13
+Current status:
+ 00] 01  02  03  04  05  06  07  08  09  10  11  12  13 [14  15 
+sending packet 1
+Current status:
+ 00  01] 02  03  04  05  06  07  08  09  10  11  12  13 [14  15 
+received ack 14
+Current status:
+ 00  01] 02  03  04  05  06  07  08  09  10  11  12  13  14 [15 
+sending packet 2
+Current status:
+ 00  01  02] 03  04  05  06  07  08  09  10  11  12  13  14 [15 
+received ack 15
+Current status:
+[00  01  02] 03  04  05  06  07  08  09  10  11  12  13  14  15 
+sending packet 3
+Current status:
+[00  01  02  03] 04  05  06  07  08  09  10  11  12  13  14  15 
+received ack 0
+Current status:
+ 00 [01  02  03] 04  05  06  07  08  09  10  11  12  13  14  15 
+sending packet 4
+Current status:
+ 00 [01  02  03  04] 05  06  07  08  09  10  11  12  13  14  15 
+received ack 1
+Current status:
+ 00  01 [02  03  04] 05  06  07  08  09  10  11  12  13  14  15 
+sending packet 5
+Current status:
+ 00  01 [02  03  04  05] 06  07  08  09  10  11  12  13  14  15 
+received ack 2
+Current status:
+ 00  01  02 [03  04  05] 06  07  08  09  10  11  12  13  14  15 
+sending packet 6
+Current status:
+ 00  01  02 [03  04  05  06] 07  08  09  10  11  12  13  14  15 
+received ack 3
+Current status:
+ 00  01  02  03 [04  05  06] 07  08  09  10  11  12  13  14  15 
+sending packet 7
+Current status:
+ 00  01  02  03 [04  05  06  07] 08  09  10  11  12  13  14  15 
+received ack 4
+finished sending file
