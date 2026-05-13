@@ -21,13 +21,13 @@ def on_mouse_move(event):
         canvas.create_line(previous_coords[0], previous_coords[1], event.x, event.y, fill='black')
         previous_coords = (event.x, event.y)
         for conn in conns.values():
-            conn.send(struct.pack("!IBII", 0, 1, event.x, event.y))
+            conn.send(struct.pack("!IBHH", 0, 1, event.x, event.y))
 def on_click(event):
     global drawing, previous_coords, conns
     drawing = True
     previous_coords = (event.x, event.y)
     for conn in conns.values():
-        conn.send(struct.pack("!IBII", 0, 0, event.x, event.y))
+        conn.send(struct.pack("!IBHH", 0, 0, event.x, event.y))
 def on_release(event):
     global drawing
     drawing = False
@@ -49,7 +49,7 @@ def conn_loop(conn_no, conn):
         except IOError:
             del conns[conn_no]
             break
-        is_cont, x, y = struct.unpack("!BII", data)
+        is_cont, x, y = struct.unpack("!BHH", data)
         if is_cont:
             canvas.create_line(prev_x, prev_y, x, y, fill='black')
         prev_x, prev_y = x, y

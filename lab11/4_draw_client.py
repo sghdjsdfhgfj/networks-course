@@ -23,12 +23,12 @@ def on_mouse_move(event):
     if drawing:
         canvas.create_line(previous_coords[0], previous_coords[1], event.x, event.y, fill='black')
         previous_coords = (event.x, event.y)
-        sock.send(struct.pack("!BII", 1, event.x, event.y))
+        sock.send(struct.pack("!BHH", 1, event.x, event.y))
 def on_click(event):
     global drawing, previous_coords
     drawing = True
     previous_coords = (event.x, event.y)
-    sock.send(struct.pack("!BII", 0, event.x, event.y))
+    sock.send(struct.pack("!BHH", 0, event.x, event.y))
 def on_release(event):
     global drawing
     drawing = False
@@ -42,8 +42,8 @@ def recv_loop():
         data = sock.recv(1024)
         if data == b'':
             continue
-        source, is_cont, x, y = struct.unpack("!IBII", data)
-        if is_cont:
+        source, is_cont, x, y = struct.unpack("!IBHH", data)
+        if is_cont and source in previous_coords:
             prev_x, prev_y = previous_coords[source]
             canvas.create_line(prev_x, prev_y, x, y, fill='black')
         previous_coords[source] = (x, y)
