@@ -1,0 +1,102 @@
+/home/yoo/.cache/pypoetry/virtualenvs/hw11-xvxSdcIU-py3.12/bin/python /media/yoo/0A4AE38B5B0344B3/uni-shit/networks/hw11/2_distance_vector.py 
+node 0: updating ('0', '1') = 1 from direct connection
+node 0: updating ('0', '2') = 3 from direct connection
+node 0: updating ('0', '3') = 7 from direct connection
+node 0: sending out distance vector {'0': 0, '1': 1, '2': 3, '3': 7}
+node 1: updating ('0', '1') = 1 from direct connection
+node 1: updating ('1', '2') = 1 from direct connection
+node 1: received distance vector from node 0
+node 1: updating ('1', '3') = 8 from an indirect connection
+node 1: sending out distance vector {'1': 0, '0': 1, '2': 1, '3': 8}
+node 2: updating ('0', '2') = 3 from direct connection
+node 2: updating ('1', '2') = 1 from direct connection
+node 2: updating ('2', '3') = 2 from direct connection
+node 2: received distance vector from node 0
+node 2: updating ('0', '2') = 2 from an indirect connection
+node 3: updating ('0', '3') = 7 from direct connection
+node 3: updating ('2', '3') = 2 from direct connection
+node 3: received distance vector from node 0
+node 3: updating ('0', '3') = 5 from an indirect connection
+node 3: updating ('1', '3') = 8 from an indirect connection
+node 3: sending out distance vector {'3': 0, '0': 5, '2': 2, '1': 8}
+node 2: received distance vector from node 1
+node 2: received distance vector from node 3
+node 2: sending out distance vector {'2': 0, '0': 2, '1': 1, '3': 2}
+node 3: received distance vector from node 2
+node 3: updating ('0', '3') = 4 from an indirect connection
+node 3: updating ('1', '3') = 3 from an indirect connection
+node 3: sending out distance vector {'3': 0, '0': 4, '2': 2, '1': 3}
+node 0: received distance vector from node 1
+node 0: updating ('0', '2') = 2 from an indirect connection
+node 0: received distance vector from node 3
+node 0: updating ('0', '3') = 5 from an indirect connection
+node 0: received distance vector from node 2
+node 0: received distance vector from node 3
+node 0: updating ('0', '3') = 4 from an indirect connection
+node 0: sending out distance vector {'0': 0, '1': 1, '2': 2, '3': 4}
+node 1: received distance vector from node 2
+node 1: updating ('1', '3') = 3 from an indirect connection
+node 1: received distance vector from node 0
+node 1: sending out distance vector {'1': 0, '0': 1, '2': 1, '3': 3}
+node 3: received distance vector from node 0
+node 2: received distance vector from node 3
+node 2: received distance vector from node 0
+node 2: received distance vector from node 1
+node 0: received distance vector from node 1
+2 3 50
+setting connection 2 - 3 to weight 50
+node 2: updating ('0', '2') = 3 from direct connection
+node 2: updating ('1', '2') = 1 from direct connection
+node 3: updating ('0', '3') = 7 from direct connection
+node 3: updating ('2', '3') = 50 from direct connection
+node 3: updating ('1', '3') = 8 from an indirect connection
+node 3: updating ('2', '3') = 9 from an indirect connection
+node 2: updating ('2', '3') = 50 from direct connection
+node 2: updating ('0', '2') = 2 from an indirect connection
+node 2: updating ('2', '3') = 4 from an indirect connection
+node 2: sending out distance vector {'2': 0, '0': 2, '1': 1, '3': 4}
+node 0: received distance vector from node 2
+node 1: received distance vector from node 2
+node 3: received distance vector from node 2
+node 3: sending out distance vector {'3': 0, '0': 7, '2': 9, '1': 8}
+node 1: updating ('1', '3') = 5 from an indirect connection
+node 1: sending out distance vector {'1': 0, '0': 1, '2': 1, '3': 5}
+node 0: received distance vector from node 3
+node 0: updating ('0', '3') = 7 from an indirect connection
+node 0: received distance vector from node 1
+node 0: updating ('0', '3') = 6 from an indirect connection
+node 0: sending out distance vector {'0': 0, '1': 1, '2': 2, '3': 6}
+node 3: received distance vector from node 0
+node 2: received distance vector from node 3
+node 2: updating ('2', '3') = 9 from an indirect connection
+node 2: received distance vector from node 1
+node 1: received distance vector from node 0
+node 2: updating ('2', '3') = 6 from an indirect connection
+node 2: received distance vector from node 0
+node 2: sending out distance vector {'2': 0, '0': 2, '1': 1, '3': 6}
+node 1: received distance vector from node 2
+node 1: updating ('1', '3') = 7 from an indirect connection
+node 0: received distance vector from node 2
+node 3: received distance vector from node 2
+node 1: sending out distance vector {'1': 0, '0': 1, '2': 1, '3': 7}
+node 0: received distance vector from node 1
+node 0: updating ('0', '3') = 7 from an indirect connection
+node 0: sending out distance vector {'0': 0, '1': 1, '2': 2, '3': 7}
+node 3: received distance vector from node 0
+node 1: received distance vector from node 0
+node 2: received distance vector from node 1
+node 2: updating ('2', '3') = 8 from an indirect connection
+node 2: received distance vector from node 0
+node 2: sending out distance vector {'2': 0, '0': 2, '1': 1, '3': 8}
+node 1: received distance vector from node 2
+node 1: updating ('1', '3') = 8 from an indirect connection
+node 0: received distance vector from node 2
+node 1: sending out distance vector {'1': 0, '0': 1, '2': 1, '3': 8}
+node 3: received distance vector from node 2
+node 0: received distance vector from node 1
+node 2: received distance vector from node 1
+node 2: updating ('2', '3') = 9 from an indirect connection
+node 2: sending out distance vector {'2': 0, '0': 2, '1': 1, '3': 9}
+node 1: received distance vector from node 2
+node 3: received distance vector from node 2
+node 0: received distance vector from node 2
